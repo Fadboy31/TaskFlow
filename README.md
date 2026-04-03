@@ -2,7 +2,6 @@
 
 A complete, production-ready task management web application built with **HTML5**, **CSS3**, and **Vanilla JavaScript**. TaskFlow helps you organize, track, and complete your tasks with a beautiful, responsive interface.
 
-![TaskFlow Banner]
 
 ## 🎯 Project Overview
 
@@ -79,7 +78,7 @@ taskflow/
      ├── screenshot1.png
      ├── screenshot2.png
     ├──Videos 
-    └── Video demo.mp4
+    └── video.mp4
 ```
 
 ## 💻 Technologies Used
