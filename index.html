@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TaskFlow - A modern, intuitive task manager to organize your life">
+    <meta name="author" content="Your Name">
+    <title>TaskFlow - Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>⚡ TaskFlow</h1>
+                </div>
+                <nav class="nav">
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            
+            <!-- Stats Section -->
+            <section class="stats-section">
+                <div class="stat-card">
+                    <div class="stat-number" id="total-tasks">0</div>
+                    <div class="stat-label">Total Tasks</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="active-tasks">0</div>
+                    <div class="stat-label">Active</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="completed-tasks">0</div>
+                    <div class="stat-label">Completed</div>
+                </div>
+            </section>
+
+            <!-- Controls Section -->
+            <section class="controls-section">
+                <div class="search-box">
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        placeholder="🔍 Search tasks..."
+                        aria-label="Search tasks"
+                    >
+                </div>
+                
+                <div class="filter-controls">
+                    <div class="filter-group">
+                        <label for="filter-status">Status:</label>
+                        <select id="filter-status" aria-label="Filter by status">
+                            <option value="all">All</option>
+                            <option value="active">Active</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="filter-priority">Priority:</label>
+                        <select id="filter-priority" aria-label="Filter by priority">
+                            <option value="all">All</option>
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button id="add-task-btn" class="btn btn-primary">
+                    <span>+ Add Task</span>
+                </button>
+            </section>
+
+            <!-- Tasks Section -->
+            <section class="tasks-section">
+                <div id="tasks-container" class="tasks-container">
+                    <!-- Tasks will be dynamically added here -->
+                    <div class="empty-state" id="empty-state">
+                        <div class="empty-icon">📝</div>
+                        <h2>No tasks yet!</h2>
+                        <p>Create your first task to get started</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 TaskFlow. Powered by MelekhFad </p>
+        </div>
+    </footer>
+
+    <!-- Add/Edit Task Modal -->
+    <div id="task-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Add New Task</h2>
+                <button id="close-modal" class="close-btn" aria-label="Close modal">&times;</button>
+            </div>
+            
+            <form id="task-form" class="task-form">
+                <div class="form-group">
+                    <label for="task-title">Task Title *</label>
+                    <input 
+                        type="text" 
+                        id="task-title" 
+                        name="title"
+                        placeholder="Enter task title"
+                        required
+                        maxlength="100"
+                    >
+                    <span class="error-message" id="title-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="task-description">Description</label>
+                    <textarea 
+                        id="task-description" 
+                        name="description"
+                        placeholder="Add task description (optional)"
+                        rows="4"
+                        maxlength="500"
+                    ></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="task-priority">Priority *</label>
+                        <select id="task-priority" name="priority" required>
+                            <option value="">Select priority</option>
+                            <option value="high">High</option>
+                            <option value="medium">Medium</option>
+                            <option value="low">Low</option>
+                        </select>
+                        <span class="error-message" id="priority-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="task-due-date">Due Date</label>
+                        <input 
+                            type="date" 
+                            id="task-due-date" 
+                            name="dueDate"
+                        >
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" id="cancel-btn" class="btn btn-secondary">Cancel</button>
+                    <button type="submit" class="btn btn-primary">
+                        <span id="submit-btn-text">Add Task</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
