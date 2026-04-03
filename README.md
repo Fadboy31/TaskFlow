@@ -53,7 +53,7 @@ A complete, production-ready task management web application built with **HTML5*
 
 1. **Clone or Download the Repository**
    ```bash
-   git clone https://github.com/Fadboy31/web-project-final.git
+   git clone https://github.com/Fadboy31/TaskFlow.git
    cd taskflow
    ```
 
