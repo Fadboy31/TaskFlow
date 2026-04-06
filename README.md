@@ -6,6 +6,16 @@ A complete, production-ready task management web application built with **HTML5*
 ## 🎯 Project Overview
 
 **TaskFlow** is a fully-featured task manager that demonstrates mastery of web development fundamentals. Built as a final project showcasing HTML, CSS, and JavaScript skills, it includes everything from semantic HTML structure to advanced JavaScript features like localStorage persistence and real-time filtering.
+## 🌐 Portfolio
+
+- Check out my personal portfolio: [https://fadboy31.github.io/](https://fadboy31.github.io/)
+- TaskFlow is featured as one of my final projects
+
+## 🚀 Live Demo Links
+
+- **GitHub Pages:** [View Live Site](https://fadboy31.github.io/TaskFlow/)
+- **Netlify:** [View Live Site](https://taskflow-31.netlify.app/)
+- **Vercel:** [View Live Site](https://task-flow-jet.vercel.app/)
 
 ## ✨ Features
 
